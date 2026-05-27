@@ -1,4 +1,4 @@
-# ♻️ Waste Classifier
+# ♻️ Smart Waste Classifier
 
 <div align="center">
 
@@ -134,8 +134,8 @@ git --version
 
 **Option A: Git (Recommended)**
 ```bash
-git clone https://github.com/your-username/smart-waste-classifier.git
-cd smart-waste-classifier
+git clone https://github.com/your-username/waste_classifier.git
+cd waste_classifier
 ```
 
 **Option B: Download ZIP**
@@ -174,23 +174,25 @@ source venv/bin/activate
 Create `requirements.txt` in the project root:
 
 ```txt
+# Core Framework
 Flask>=2.3.0
 Flask-SocketIO>=5.3.0
-opencv-python>=4.8.0
-tensorflow>=2.13.0
-numpy>=1.24.0
 eventlet>=0.33.0
-Pillow>=10.0.0
-python-socketio>=5.9.0
 Werkzeug>=2.3.0
-tensorflow-gpu>=2.13.0
-cudatoolkit>=11.8
-cudnn>=8.6
+Jinja2>=3.1.2
+
+# Deep Learning & Computer Vision
+tensorflow>=2.13.0
+opencv-python>=4.8.0
 opencv-contrib-python>=4.8.1.78
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# WebSocket & Utilities
+python-socketio>=5.9.0
+simple-websocket>=1.0.0
 python-dotenv>=1.0.0
 requests>=2.31.0
-simple-websocket>=1.0.0
-Jinja2>=3.1.2
 ```
 
 Then install:
@@ -305,7 +307,7 @@ http://YOUR_IP_ADDRESS:5000
 ## 📁 Project Structure
 
 ```
-smart-waste-classifier/
+waste_classifier/
 │
 ├── app.py                      # Main Flask server (backend)
 ├── requirements.txt            # Python dependencies
@@ -777,7 +779,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 | Field | Info |
 |-------|------|
 | Version | 1.0.0 |
-| Last Updated | Mayo 2026 |
+| Last Updated | January 2024 |
 | Status | ✅ Production Ready |
 | Test Coverage | 85% |
 | Documentation | Complete |
@@ -788,6 +790,6 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 Made with ♻️, 🐍 Python, and 🤖 TensorFlow for a more sustainable world
 
-[Report Bug](https://github.com/your-username/smart-waste-classifier/issues) · [Request Feature](https://github.com/your-username/smart-waste-classifier/issues) · [⭐ Star Project](https://github.com/your-username/smart-waste-classifier)
+[Report Bug](https://github.com/your-username/waste_classifier/issues) · [Request Feature](https://github.com/your-username/waste_classifier/issues) · [⭐ Star Project](https://github.com/your-username/waste_classifier)
 
 </div>
