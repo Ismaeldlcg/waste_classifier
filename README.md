@@ -1,4 +1,4 @@
-# ♻️ Smart Waste Classifier
+# ♻️ Waste Classifier
 
 <div align="center">
 
@@ -47,7 +47,7 @@
 
 ## 🎯 Description
 
-**Smart Waste Classifier** is an intelligent web application that uses artificial intelligence to classify recyclable waste in real-time through your device's camera. The system can identify **5 categories** of recyclable materials and provides detailed statistics about detections.
+**Waste Classifier** is an intelligent web application that uses artificial intelligence to classify recyclable waste in real-time through your device's camera. The system can identify **5 categories** of recyclable materials and provides detailed statistics about detections.
 
 ### Classified Categories
 
@@ -307,16 +307,30 @@ http://YOUR_IP_ADDRESS:5000
 ## 📁 Project Structure
 
 ```
-waste_classifier/
+smart-waste-classifier/
 │
-├── app.py                      # Main Flask server (backend)
-├── requirements.txt            # Python dependencies
-├── test_installation.py        # Installation test script
-├── README.md                   # Documentation
+├── app.py                          # Main Flask server (backend)
+├── train.py                        # Model training script
+├── requirements.txt                # Python dependencies
+├── README.md                       # Documentation
+│
+├── dataset/
+│   ├── raw/                        # Raw dataset images
+│   ├── test/                       # Test split
+│   ├── train/                      # Training split
+│   ├── val/                        # Validation split
+│   └── prepare_trashnet.py         # Dataset preparation script
 │
 ├── models/
-│   ├── scratch_best.keras      # CNN from scratch (~15 MB)
-│   └── transfer_best.keras     # Transfer Learning (~90 MB)
+│   ├── model_scratch.py            # CNN from scratch architecture
+│   ├── model_transfer.py           # Transfer Learning architecture
+│   ├── scratch_best.keras          # Best CNN weights (~15 MB)
+│   ├── transfer_best.keras         # Best Transfer Learning weights (~90 MB)
+│   ├── scratch_curves.png          # Training curves (scratch)
+│   ├── transfer_curves.png         # Training curves (transfer)
+│   ├── scratch_history.json        # Training history (scratch)
+│   ├── transfer_history.json       # Training history (transfer)
+│   └── model_comparison.png        # Model comparison chart
 │
 ├── static/
 │   ├── css/
@@ -327,15 +341,8 @@ waste_classifier/
 ├── templates/
 │   └── index.html
 │
-├── datasets/                   # (Optional) Training datasets
-│   ├── cardboard/
-│   ├── glass/
-│   ├── metal/
-│   ├── paper/
-│   └── plastic/
-│
-└── logs/                       # (Auto-generated)
-    └── app.log
+└── utils/
+    └── evaluate_models.py          # Model evaluation utilities
 ```
 
 ---
