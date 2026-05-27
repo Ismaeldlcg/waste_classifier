@@ -762,7 +762,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 **Ismael De La Cruz Gomez**
 
-[![GitHub](https://img.shields.io/badge/GitHub-@your--username-black?logo=github)](https://github.com/your-username)
+[![GitHub](https://img.shields.io/badge/GitHub-@your--username-black?logo=github)](https://github.com/Ismaeldlcg)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://linkedin.com/in/your-profile)
 [![Twitter](https://img.shields.io/badge/Twitter-@your--handle-1DA1F2?logo=twitter)](https://twitter.com/your-handle)
 [![Portfolio](https://img.shields.io/badge/Portfolio-your--site.com-green)](https://your-portfolio.com)
