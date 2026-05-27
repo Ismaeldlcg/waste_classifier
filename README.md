@@ -1,4 +1,4 @@
-# ♻️ Smart Waste Classifier
+# ♻️ Waste Classifier
 
 <div align="center">
 
