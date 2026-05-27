@@ -259,7 +259,7 @@ python app.py
 **Expected output:**
 ```
 ============================================================
-   SMART WASTE CLASSIFIER - WEB APPLICATION
+   WASTE CLASSIFIER - WEB APPLICATION
 ============================================================
 
   Models loaded: ['scratch', 'transfer']
@@ -305,7 +305,7 @@ http://YOUR_IP_ADDRESS:5000
 ## 📁 Project Structure
 
 ```
-smart-waste-classifier/
+waste_classifier/
 │
 ├── app.py                          # Main Flask server (backend)
 ├── train.py                        # Model training script
@@ -739,7 +739,7 @@ This project is licensed under the **MIT License**.
 ```
 MIT License
 
-Copyright (c) 2024 Smart Waste Classifier
+Copyright (c) 2026 Waste Classifier
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
