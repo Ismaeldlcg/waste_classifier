@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Smart Waste Classifier - AI Recyclable Waste Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">♻️</div>
+                    <div class="logo-text">
+                        <h1>Smart Waste Classifier</h1>
+                        <span>AI-Powered Recyclable Waste Detection</span>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <div class="model-selector">
+                        <button class="model-btn" data-model="scratch" id="btn-scratch">
+                            <span>🧠</span> CNN Scratch
+                        </button>
+                        <button class="model-btn active" data-model="transfer" id="btn-transfer">
+                            <span>🚀</span> Transfer Learning
+                        </button>
+                    </div>
+                    <button class="reset-btn" id="reset-stats">
+                        <span>⟳</span> Reset Stats
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="camera-section">
+                <div class="camera-container">
+                    <div class="camera-wrapper">
+                        <video id="video" autoplay playsinline></video>
+                        <canvas id="canvas" style="display: none;"></canvas>
+                        <div class="camera-overlay">
+                            <div class="scan-line"></div>
+                            <div class="roi-box"></div>
+                        </div>
+                        <div class="camera-status" id="camera-status">
+                            <div class="spinner"></div>
+                            <span>Activando cámara...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="detection-card glass-card">
+                    <div class="detection-header">
+                        <h3>🎯 Detección Actual</h3>
+                        <div class="confidence-badge" id="confidence-badge">
+                            <span class="confidence-value">0%</span>
+                        </div>
+                    </div>
+                    <div class="detection-result" id="detection-result">
+                        <div class="detection-placeholder">
+                            <div class="placeholder-icon">📷</div>
+                            <p>Coloca un objeto en el recuadro central</p>
+                        </div>
+                    </div>
+                    <div class="probabilities-list" id="probabilities">
+                    </div>
+                </div>
+
+                <div class="stats-card glass-card">
+                    <div class="stats-header">
+                        <h3>📊 Estadísticas</h3>
+                        <div class="stats-info">
+                            <span class="session-time" id="session-time">00:00</span>
+                            <span class="total-detections" id="total-detections">Total: 0</span>
+                        </div>
+                    </div>
+                    <div class="stats-bars" id="stats-bars">
+                    </div>
+                    <div class="stats-footer">
+                        <div class="model-status">
+                            <span class="status-dot" id="model-status-dot"></span>
+                            <span id="model-status-text">Modelo: Transfer Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="keyboard-shortcuts">
+                    <span>🎮 Controles:</span>
+                    <kbd>R</kbd> <span>Reset Stats</span>
+                    <kbd>1</kbd> <span>Scratch</span>
+                    <kbd>2</kbd> <span>Transfer</span>
+                </div>
+                <div class="powered-by">
+                    Powered by TensorFlow & MobileNetV2
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
