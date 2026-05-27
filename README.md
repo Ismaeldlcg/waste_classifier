@@ -174,25 +174,23 @@ source venv/bin/activate
 Create `requirements.txt` in the project root:
 
 ```txt
-# Core Framework
 Flask>=2.3.0
 Flask-SocketIO>=5.3.0
-eventlet>=0.33.0
-Werkzeug>=2.3.0
-Jinja2>=3.1.2
-
-# Deep Learning & Computer Vision
-tensorflow>=2.13.0
 opencv-python>=4.8.0
-opencv-contrib-python>=4.8.1.78
+tensorflow>=2.13.0
 numpy>=1.24.0
+eventlet>=0.33.0
 Pillow>=10.0.0
-
-# WebSocket & Utilities
 python-socketio>=5.9.0
-simple-websocket>=1.0.0
+Werkzeug>=2.3.0
+tensorflow-gpu>=2.13.0
+cudatoolkit>=11.8
+cudnn>=8.6
+opencv-contrib-python>=4.8.1.78
 python-dotenv>=1.0.0
 requests>=2.31.0
+simple-websocket>=1.0.0
+Jinja2>=3.1.2
 ```
 
 Then install:
